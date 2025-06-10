@@ -1,0 +1,39 @@
+@model Patient
+@{
+    ViewBag.Title = "Signin Page";
+}
+
+<h2> Signin </h2>
+
+<form method="post" asp-action="Signin">
+    <div>
+        <label class="form-control-plaintext" asp-for="tc"></label>
+        <input class="form-control" asp-for="tc"/>
+        <span asp-validation-for="tc" class="text-danger"></span>
+    </div>
+    <div>
+        <label class="form-control-plaintext" asp-for="PatientName"></label>
+        <input class="form-control" asp-for="PatientName"  />
+        <span asp-validation-for="PatientName" class="text-danger"></span>
+    </div>
+    <div>
+        <label class="form-control-plaintext" asp-for="PatientSurname"></label>
+        <input class="form-control" asp-for="PatientSurname" />
+        <span asp-validation-for="PatientSurname" class="text-danger"></span>
+    </div>
+    <div>
+        <label class="form-control-plaintext" asp-for="PatientPassword"></label>
+        <input class="form-control" type="password" asp-for="PatientPassword"/>
+        <span asp-validation-for="PatientPassword" class="text-danger"></span>
+    </div>
+    <br />
+    <input type="submit" class="btn btn-success" value="Signin"/>
+    <a asp-action="Login"><label class="btn btn-outline-success">Login</label></a>
+
+</form>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

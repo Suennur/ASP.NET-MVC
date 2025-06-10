@@ -1,0 +1,36 @@
+@model Hastane.Models.Doctor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Doctor Details</h1>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.doctorName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.doctorName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.polic)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.policlinic.PolicName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.workTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.workTime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.doctorId"><label class="btn btn-outline-info">Edit</label></a> 
+    <a asp-action="Index"><label class="btn btn-outline-secondary">Back to List</label></a>
+</div>

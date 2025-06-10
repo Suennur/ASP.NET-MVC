@@ -1,0 +1,44 @@
+# Build klasörleri
+bin/
+obj/
+out/
+
+# Kullanıcıya özel dosyalar
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Log dosyaları
+*.log
+
+# Veritabanı dosyaları
+*.mdf
+*.ldf
+*.db
+
+# Visual Studio dosyaları
+.vs/
+
+# Geçici dosyalar
+*.tmp
+*.temp
+
+# Node.js (varsa front-end bağımlılıkları)
+node_modules/
+
+# Yayınlama klasörü
+publish/
+
+# İşletim sistemi tarafından oluşturulan dosyalar
+.DS_Store
+Thumbs.db
+
+# Çevresel değişkenler
+.env
+
+# Rider IDE dosyaları
+.idea/
